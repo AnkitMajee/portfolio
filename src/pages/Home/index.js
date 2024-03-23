@@ -7,13 +7,13 @@ import Experiences from './Experiences'
 function Home() {
   return (
     <div >
-    <Header />
+      <Header />
       <div className='bg-primary px-40 xm:px-5'>
         <Intro />
         <About />
         <Experiences />
       </div>
-    </div>  
+    </div>
   )
 }
 
