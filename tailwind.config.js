@@ -5,13 +5,19 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors:{
+      colors: {
         "primary": "#000000", // dark black
         "secondary": "#eC1D95",
         "tertiary": "#38A3A5",
         "accent": "#FFD700" // gold
-            }
-          },
-        },
-        plugins: [],
       }
+    },
+    screens: {
+      'lg': { 'max': '2023px' },
+      // => @media (max-width: 1023px) { ... }
+      'sm': { 'max': '1000px' },
+      // => @media (max-width: 639px) { ... }
+    },
+  },
+  plugins: [],
+}

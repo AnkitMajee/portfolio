@@ -7,14 +7,14 @@ function About() {
   return (
     <div>
       <SectionTitle title="About" />
-      <div className='flex w-full items-center'>
-        <div className='h-[50vh] '>
+      <div className='flex w-full items-center sm:flex-col'>
+        <div className='h-[50vh] w-1/2 sm:w-full'>
           <lottie-player src="https://lottie.host/4f503a30-ed6a-47d6-b2ac-78a0b4e2a5f1/nQGPt5l1PE.json"
             background="##fff"
             speed="1"
           ></lottie-player>
         </div>
-        <div className='flex flex-col gap-8 w-1/2' >
+        <div className='flex flex-col gap-8 w-1/2 sm:w-full' >
         <div className='text-white'>
           <p>
             I am a software engineer with a passion for building web applications. I have experience in developing full-stack web applications using React, Node.js, and MongoDB. I am also skilled in using Git, GitHub, and Heroku. I have a strong foundation in computer science and I am always eager to learn new technologies. I am currently looking for opportunities to work as a software engineer.
