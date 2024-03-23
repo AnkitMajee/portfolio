@@ -10,12 +10,12 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 4px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background-color: black;
+    background-color: #052940a9;
   }
    
   /* Handle */
