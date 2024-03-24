@@ -28,3 +28,53 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #000c0d14; 
   }
+
+  .A{
+    animation: A 1s infinite;
+  }
+
+  @keyframes A {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  .M{
+    animation: M 1s infinite;
+  }
+
+  @keyframes M {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+
+  .s{
+    animation: s 1s infinite;
+  }
+
+  @keyframes s {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
