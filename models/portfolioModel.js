@@ -1,6 +1,6 @@
 const mongooes = require('mongoose');
 
-const introSechema = new mongooes.Schema({
+const introSchema = new mongooes.Schema({
     welcomeText : {
         type: String,
         required: true
@@ -23,7 +23,7 @@ const introSechema = new mongooes.Schema({
     },
 });
 
-const aboutSchema = new mongooes.schema({
+const aboutSchema = new mongooes.Schema({
     lottieURL:{
         type: String,
         required: true
@@ -133,8 +133,8 @@ const contactSchema = new mongooes.Schema({
 module.exports={
     Intro : mongooes.model("intros",introSchema),
     About : mongooes.model("abouts",aboutSchema),
-    Experiences : mongooes.model("experience",experienceSchema),
-    Projects: mongooes.model("projects", projectsSchema),
-    Courses: mongooes.model("courses", coursesSchema),
+    Experience : mongooes.model("experience",experienceSchema),
+    Project: mongooes.model("projects", projectsSchema),
+    Course: mongooes.model("courses", coursesSchema),
     Contact: mongooes.model("contacts", contactSchema),
 };
