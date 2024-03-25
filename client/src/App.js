@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Loader from "./components/Loader";
@@ -36,7 +36,7 @@ function App() {
   }, [reloadData])
   return (
     <BrowserRouter>
-    {showloading ? <Loader /> : null}
+    {loading ? <Loader /> : null}
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
