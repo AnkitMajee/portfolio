@@ -37,11 +37,7 @@ function Projects() {
                 <div className='flex flex-col gap-5'>
                     <h1 className='text-secondary text-2xl'>{projects[selectedItemIndex].title}</h1>
                     <p className='text-white'>{projects[selectedItemIndex].description}</p>
-                    <p className='text-white '>
-                        lorem23svfghdhthdhdhhfhkytkyukykllyluulyuluyuouyuouluoluu
-                        ulyuloiomoibdlgiggfgheoirugpfhgpieurhpgihupirehiuhgipuhrg
-                        gdpiufghesiughdiuhiehiehgiodfhipiupifsripgpihfdihihfduigi
-                    </p>
+                    <p className='text-white '>{projects[selectedItemIndex].technologies?.join(", ")}</p>
                 </div>
             </div>
     </div>

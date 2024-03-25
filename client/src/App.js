@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Loader from "./components/Loader";
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import { useEffect, useState } from 'react';
+import Loader from './components/Loader';
 import axios from "axios";
 import { useDispatch, useSelector } from 'react-redux';
 import { HideLoading, ReloadData, SetPortfolioData, ShowLoading } from './redux/rootSlice';
-
-
+import store from './redux/store';
+import Admin from './pages/Admin';
+import Login from './pages/Admin/login';
 
 function App() {
 
@@ -36,12 +36,13 @@ function App() {
   }, [reloadData])
   return (
     <BrowserRouter>
-    {loading ? <Loader /> : null}
+      {loading ? <Loader /> : null}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin-login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
 export default App;
