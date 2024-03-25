@@ -1,35 +1,37 @@
 import React from 'react'
 import SectionTitle from '../../components/SectionTitle'
+import { useSelector } from 'react-redux';
 
 function Contact() {
-    const user = {
-        name: 'John Doe',
-        email: 'dsdklj@gmail.com',
-        phone: '1234567890',
-        address: '123 Main St, New York, NY 10001'
-    }
-  return (
-    <div>
-        <SectionTitle title="Hi! there" />
-        <div className='flex sm:flex-col items-center justify-between'>
-            <div className='flex flex-col gap-3'>
-            <p className='text-white text-md'>{"{"}</p>
-            {Object.keys(user).map((key) => (
-                <p className='ml-5'>
-                <span className='text-white'>{key} :</span>
-                <span className='text-secondary'>{user[key]}</span>
-                </p>
-                
-            ))}
-            <p className='text-white text-md'>{"}"}</p>
-
+    const { portfolioData } = useSelector((state) => state.root);
+    const {contact} = portfolioData;
+    return  (
+        <div className='bg-quaternary p-10  rounded-xl mb-28'>
+            <SectionTitle title="Let's work together" />
+            <div className='flex sm:flex-col items-center justify-between'>
+                <div className='flex flex-col '>
+                    <p className='text-tertiary'>{"{"}</p>
+                   {Object.keys(contact).map((key) => {
+                        return (
+                           key !== '_id' && <p key={key} className='ml-5'>
+                                <span className='text-tertiary'>{key} : </span>
+                                <span className='text-tertiary'>{contact[key]}</span>
+                            </p>
+                        );
+                    })}
+                    <p className='text-tertiary'>{"}"}</p>
+                </div>
+                <div className='h-[400px]'>
+                    <dotlottie-player 
+                    src="https://lottie.host/6b0ca490-83bb-4807-a4d1-8f4e4791dff7/yRaEB9KGVj.json" 
+                    background="transparent" 
+                    speed="1" 
+                    autoplay>
+                    </dotlottie-player>
+                </div>
             </div>
-            <div className='h-[500px]'>
-                <img src='https://images.unsplash.com/photo-1612831165343-2c9f4e2f0b3d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60' alt='contact' className='h-full w-full object-cover' />
-            </div>
-    </div>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Contact
