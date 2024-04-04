@@ -24,13 +24,13 @@ To set up this project locally, follow these steps:
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/your-portfolio.git
+    git clone https://github.com/AnkitMajee/portfolio.git
     ```
 
 2. Navigate into the project directory:
 
     ```bash
-    cd your-portfolio
+    cd portfolio
     ```
 
 3. Install the dependencies using npm:
